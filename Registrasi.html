@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi - PUMA</title>
+    <style>
+        body {
+            background-color: #111111;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Style Input Form Biar Nyatu Sama Tema Gelap */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            background-color: #111111;
+            border: 1px solid #616161;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #FFCC00;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP BAR HITAM DENGAN LOGO PUMA (Persis seperti di halaman Kontak) -->
+    <table width="100%" border="0" cellpadding="10" bgcolor="#000000">
+        <tr>
+            <td align="left">
+                <a href="Home.html">
+                    <img src="puma-logo-cover.png" width="20" alt="PUMA">
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 2. MENU NAVIGASI KOTAK-KOTAK (Tombol Registrasi aktif dengan border kuning) -->
+    <table width="100%" border="0" cellpadding="15" bgcolor="#1e1e1e">
+        <tr>
+            <td align="center">
+                <a href="Home.html" style="text-decoration: none;"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 10px 20px; cursor: pointer;"><b>Home</b></button></a>
+                <a href="Produk.html" style="text-decoration: none;"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 10px 20px; cursor: pointer;"><b>Produk</b></button></a>
+                <a href="Galeri.html" style="text-decoration: none;"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 10px 20px; cursor: pointer;"><b>Galeri</b></button></a>
+                <a href="Kontak Kami.html" style="text-decoration: none;"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 10px 20px; cursor: pointer;"><b>Kontak kami</b></button></a>
+                <a href="Registrasi.html" style="text-decoration: none;"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #FFCC00; padding: 10px 20px; cursor: pointer;"><b>Registrasi</b></button></a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 3. KOTAK KONTEN REGISTRASI (Layout & Posisi Persis Seperti Customer Service) -->
+    <table width="100%" border="0" cellpadding="40" bgcolor="#1e1e1e">
+        <tr>
+            <td align="center">
+                <!-- Pembungkus dalam biar rata kiri di tengah layar persis teks Customer Service -->
+                <table width="100%" style="max-width: 500px;" border="0" cellpadding="8">
+                    <tr>
+                        <td colspan="2">
+                            <font face="Arial" size="5" color="#FFFFFF"><b>Registrasi Member</b></font><br>
+                            <font face="Arial" size="2" color="#CCCCCC"><i>Daftarkan akunmu untuk mendapatkan info rilis terbaru PUMA</i></font>
+                            <br><br>
+                        </td>
+                    </tr>
+                    <form action="" method="post">
+                        <tr>
+                            <td><b>Nama Lengkap:</b><br><br>
+                                <input type="text" name="txtuser" placeholder="Hanya huruf" pattern="[A-Za-z ]+" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Email:</b><br><br>
+                                <input type="email" name="txtemail" placeholder="contoh@email.com" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Password:</b><br><br>
+                                <input type="password" name="txtpass" placeholder="Min. 6 - 10 karakter" pattern="[A-Za-z0-9]{6,10}" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Jenis Kelamin:</b><br><br>
+                                <input type="radio" name="jkel" value="Pria" required> Pria &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="jkel" value="Wanita"> Wanita
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Kategori / Status:</b><br><br>
+                                <select name="txtstatus">
+                                    <option value="mahasiswa">Mahasiswa</option>
+                                    <option value="umum">Umum</option>
+                                    <option value="atlet">Atlet</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Alamat:</b><br><br>
+                                <textarea name="txtalm" rows="3" placeholder="Alamat lengkap..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                                <input type="submit" value="Daftar Sekarang" style="background-color: #FFCC00; color: #000000; border: 1px solid #FFCC00; padding: 10px 25px; font-weight: bold; cursor: pointer;">
+                                &nbsp;
+                                <input type="reset" value="Batal" style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 4. FOOTER HITAM (Persis sama dengan halaman Kontak) -->
+    <table width="100%" border="0" cellpadding="30" bgcolor="#000000">
+        <tr>
+            <td align="center">
+                <img src="puma-logo-cover.png" width="35" alt="PUMA"><br><br>
+                <font face="Arial" size="1" color="#666666">&copy; 2026 PUMA Indonesia. All Rights Reserved.</font>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

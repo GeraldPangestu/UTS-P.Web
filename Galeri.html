@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galeri - PUMA LaMelo Ball</title>
+    <style>
+        body {
+            background-color: #111111;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* KOTAK UTAMA CAROUSEL */
+        .slider-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            background-color: #1e1e1e;
+        }
+        /* TRACK GAMBAR (Default-nya diam / paused) */
+        .slider-track {
+            display: flex;
+            width: 800%; /* 8 gambar x 100% */
+            animation: smoothSlide 20s infinite ease-in-out;
+            animation-play-state: paused; /* DIAM KETIKA KURSOR TIDAK DI ATASNYA */
+        }
+        
+        /* KETIKA KURSOR DIARAHKAN KE GAMBAR, ANIMASI BERGERAK PERLAHAN */
+        .slider-container:hover .slider-track {
+            animation-play-state: running; 
+        }
+
+        .slider-track img {
+            width: 100%;
+            max-width: 1000px;
+            height: 1000px;
+            object-fit: cover;
+        }
+
+        /* ANIMASI GESER PERLAHAN */
+        @keyframes smoothSlide {
+            1%, 5%    { transform: translateX(0%); }
+            10%, 15%  { transform: translateX(-12.5%); }
+            20%, 25%  { transform: translateX(-25%); }
+            30%, 35%  { transform: translateX(-37.5%); }
+            40%, 45%  { transform: translateX(-50%); }
+            50%, 55%  { transform: translateX(-62.5%); }
+            60%, 65%  { transform: translateX(-75%); }
+            70%       { transform: translateX(0%); }
+        }
+    </style>
+</head>
+<!-- WARNA BACKGROUND HITAM KONSISTEN -->
+<body bgcolor="#111111" text="#FFFFFF" link="#FFCC00" vlink="#FFCC00">
+
+    <!-- 1. HEADER (LOGO PUMA & NAMA HALAMAN) -->
+    <table width="100%" border="0" cellpadding="10" bgcolor="#000000">
+       
+        <tr>
+            <!-- LOGO PUMA ATAS -->
+            <td align="left" width="50%">
+                <a href="Home.html"><img src="puma-logo-cover.png" width="20" alt="Logo Puma"></a>
+            </td>
+            <!-- TULISAN JUDUL HALAMAN -->
+            <td align="right" width="50%">
+                <font face="Arial" size="1.5"><b>GALERI</b></font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 2. MENU NAVIGASI KESINAMBUNGAN (Tombol Galeri aktif dengan border kuning) -->
+    <table width="100%" border="0" cellpadding="15" bgcolor="#1e1e1e">
+        <tr>
+            <td align="center">
+                <a href="Home.html"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 8px 12px; cursor: pointer; margin: 3px;"><b>Home</b></button></a>
+                <a href="produk.html"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 8px 12px; cursor: pointer; margin: 3px;"><b>Produk</b></button></a>
+                <a href="Galeri.html"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #FFCC00; padding: 8px 12px; cursor: pointer; margin: 3px;"><b>Galeri</b></button></a>
+                <a href="Kontak Kami.html"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 8px 12px; cursor: pointer; margin: 3px;"><b>Kontak kami</b></button></a>
+                <a href="Registrasi.html"><button style="background-color: #1e1e1e; color: #FFFFFF; border: 1px solid #616161; padding: 8px 12px; cursor: pointer; margin: 3px;"><b>Registrasi</b></button></a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 3. JUDUL GALERI -->
+    <table width="100%" border="0" cellpadding="10">
+        <tr>
+            <td align="center">
+                <font face="Arial" size="5" color="#FFFFFF"><b>Sesuaikan Stylemu</b></font><br>
+                <font face="Arial" size="2" color="#AAAAAA">Varian Terbatas dari Melo</font>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 4. WADAH CAROUSEL OTOMATIS (GESER PERLAHAN SAAT DI-HOVER) -->
+    <div class="slider-container">
+        <div class="slider-track">
+            <img src="MB (1).05-Lo-Miami-Basketball-Shoes-Unisex.jpg" alt="Foto 1">
+            <img src="MB.05-Lo-Miami-Basketball-Shoes-Unisex.jpg" alt="Foto 2">
+            <img src="MB.05-Hive-Basketball-Shoes-Unisex.jpg" alt="Foto 3">
+            <img src="MB (1).05-Hive-Basketball-Shoes-Unisex.jpg" alt="Foto 4">
+            <img src="MB (1).05-Melo-World-Basketball-Shoes-Unisex.jpg" alt="Foto 5">
+            <img src="MB.05-Melo-World-Basketball-Shoes-Unisex.jpg" alt="Foto 6">
+            <img src="MB (1).05-Voltage-Basketball-Shoes-Unisex.jpg" alt="Foto 7">
+            <img src="MB.05-Voltage-Basketball-Shoes-Unisex.jpg" alt="Foto 8">
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- 5. FOOTER (LOGO PUMA BAWAH) -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="#000000">
+        <tr>
+            <td align="center">
+                <!-- GANTI LOGO PUMA BAWAH -->
+                <img src="puma-logo-cover.png" width="30">
+                <br><br>
+                <font face="Arial" size="1" color="#666666"> &copy; 2026 PUMA Indonesia. All Rights Reserved.</font>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
